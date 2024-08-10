@@ -1,74 +1,56 @@
 package com.chen.entity;
 
-public class Result {
-    private String process;
+import lombok.Data;
 
-    private String department;
+@Data
+public class Result<T> {
 
-    private String aspect;
+    T data;
 
-    private String message;
+    String msg;
+
+    int status;
 
     public Result() {
 
     }
 
-    public Result(String process, String department, String aspect) {
-        this.process = process;
-        this.department = department;
-        this.aspect = aspect;
+    public Result(T obj) {
+        data = obj;
     }
 
-    public Result(String message) {
-        this.message = message;
+    public Result(T obj, int status, String msg) {
+        this.data = obj;
+        this.status = status;
+        this.msg = msg;
     }
 
-    public Result(String process, String department, String aspect, String message) {
-        this.process = process;
-        this.department = department;
-        this.aspect = aspect;
-        this.message = message;
+    public static <T> Result<T> packSuccess(T data) {
+        return pack(data, ResultCode.SUCCESS);
     }
 
-    public String getDepartment() {
-        return department;
+    public static <T> Result<T> packSuccess(T data, String msg) {
+        return pack(data, ResultCode.SUCCESS, msg);
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public static <T> Result<T> packFailure(T data) {
+        return pack(data, ResultCode.FAIL);
     }
 
-    public String getAspect() {
-        return aspect;
+    public static <T> Result<T> packFailure(T data, String msg) {
+        return pack(data, ResultCode.FAIL, msg);
     }
 
-    public void setAspect(String aspect) {
-        this.aspect = aspect;
+    public static <T> Result<T> pack(T data, ResultCode resultCode) {
+        return pack(data, resultCode.code, resultCode.msg);
     }
 
-    public String getProcess() {
-        return process;
+    public static <T> Result<T> pack(T data, ResultCode resultCode, String msg) {
+        return pack(data, resultCode.code, msg);
     }
 
-    public void setProcess(String process) {
-        this.process = process;
+    public static <T> Result<T> pack(T data, int status, String msg) {
+        return new Result<T>(data, status, msg);
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    @Override
-    public String toString() {
-        return "Result{" +
-                "process='" + process + '\'' +
-                ", department='" + department + '\'' +
-                ", aspect='" + aspect + '\'' +
-                ", message='" + message + '\'' +
-                '}';
-    }
 }

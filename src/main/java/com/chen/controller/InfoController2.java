@@ -54,7 +54,7 @@ public class InfoController2 {
                     "    {'智能窗帘': 'Z-Wave模块'},\n" +
                     "    {'智能窗帘': '遥控器'},\n" +
                     "    {'智能窗帘': '智能控制器'}";
-        } else if ("增材实例验证".equals(fileName)) {
+        } else if ("增材实例验证.docx".equals(fileName)) {
             return "示例：{'3D打印材料': '不锈钢'},\n" +
                     "    {'3D打印材料': '黄金'},\n" +
                     "    {'3D打印材料': '银'},\n" +
@@ -98,7 +98,7 @@ public class InfoController2 {
                     "    {'3D打印材料': 'PLA'},\n" +
                     "    {'3D打印材料': 'LayWood'},\n" +
                     "    {'3D打印材料': 'NinjaFlex'}";
-        } else if ("新能源实例验证".equals(fileName)) {
+        } else if ("新能源实例验证.docx".equals(fileName)) {
             return "示例：{'动力电池': '锂离子电池'},\n" +
                     "    {'动力电池': '磷酸铁锂(LFP)'},\n" +
                     "    {'动力电池': '三元锂电池(NCM/NCA)'},\n" +
@@ -130,7 +130,7 @@ public class InfoController2 {
                     "    {'热管理系统': '空调热泵系统'},\n" +
                     "    {'热管理系统': '冷却液'},\n" +
                     "    {'热管理系统': '热传导材料'}";
-        } else if ("航天实例验证".equals(fileName)) {
+        } else if ("航天实例验证.docx".equals(fileName)) {
             return "示例：{'中国商飞': '设计研发中心'},\n" +
                     "    {'中国商飞': '总装制造中心'},\n" +
                     "    {'中国商飞': '客户服务中心'},\n" +
