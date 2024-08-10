@@ -5,9 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/upload" method="post" enctype="multipart/form-data">
+<form action="ontology/upload" method="post" enctype="multipart/form-data">
     <input type="file" name="file">
-    <button type="submit">Upload</button>
+    <button type="submit">本体upload</button>
+</form>
+<form action="instance/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">实例upload</button>
+</form>
+<form action="knowledge/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">知识upload</button>
 </form>
 </body>
 </html>
