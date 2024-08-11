@@ -54,7 +54,7 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "家电");
         }
         else if ("智能家居2.pdf".equals(fileName)) {
             List<String> process = Arrays.asList(
@@ -88,7 +88,7 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "家电");
         }
 
         else if ("3D打印1.pdf".equals(fileName)) {
@@ -117,7 +117,7 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "增材制造");
         }
         else if ("3D打印2.pdf".equals(fileName)) {
             List<String> process = Arrays.asList(
@@ -147,7 +147,8 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "增材制造");
+
         }
         else if ("3D打印3.pdf".equals(fileName)) {
             List<String> process = Arrays.asList(
@@ -175,7 +176,8 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "增材制造");
+
         }
 
         else if ("新能源车1.pdf".equals(fileName)) {
@@ -211,7 +213,7 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "新能源");
         }
 
         else if ("新能源车2.pdf".equals(fileName)) {
@@ -247,7 +249,7 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "新能源");
         }
         else if ("新能源车3.pdf".equals(fileName)) {
             List<String> process = Arrays.asList(
@@ -282,7 +284,8 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "新能源");
+
         }
 
         else if ("航天航空1.pdf".equals(fileName)) {
@@ -318,7 +321,7 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "航空航天");
         }
 
         else if ("航天航空2.pdf".equals(fileName)) {
@@ -353,7 +356,8 @@ public class InfoController3 {
             result.add(process);
             result.add(department);
             result.add(aspect);
-            return Result.packSuccess(result);
+            return Result.packSuccess(result, "航空航天");
+
         } else {
             return Result.packSuccess(result, "文件内容选择不匹配,请重新挑选");
         }
